@@ -1,0 +1,13 @@
+@import './style/variables.scss';
+
+body {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  max-width: $max-width;
+  max-height: $max-height;
+  margin: 0 auto;
+
+  align-items: center;
+}

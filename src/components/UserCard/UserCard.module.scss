@@ -1,0 +1,62 @@
+.userCard {
+    padding: 10px;
+    margin: 8px;
+    display: flex;
+    align-items: center;
+}
+.avatarUrl {
+    width: 72px;
+    height: 72px;
+}
+.avatarContainer {
+    display: flex;
+    min-width: 179px;
+    height: 60px;
+    align-items: center;
+    gap: 10px; // Отступ между аватаром и информацией
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.userInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.nameContainer {
+    display: flex;
+
+}
+
+.firstName {
+    font-family: Inter;
+    margin: 0;
+font-weight: 500;
+font-size: 16px;
+line-height: 20px;
+letter-spacing: 0%;
+vertical-align: middle;
+
+
+}
+
+.userTag {
+    font-size: 14px;
+    color: #666;
+    margin-left: 4px; // Отступ между фамилией и тегом
+}
+
+.userRole {
+    min-width: 46px;
+    font-family: Inter;
+font-weight: 400;
+font-size: 13px;
+line-height: 16px;
+letter-spacing: 0%;
+margin: 0;
+
+}

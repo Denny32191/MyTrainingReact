@@ -1,0 +1,17 @@
+.userList {
+  width: 100%;
+  max-height: 720px; 
+  overflow-y: auto;
+
+}
+
+/* Скрываем скроллбар в WebKit-браузерах */
+.userList::-webkit-scrollbar {
+  width: 0; /* Ширина скроллбара */
+  background: transparent; /* Прозрачный фон */
+}
+
+/* Скрываем ползунок скроллбара */
+.userList::-webkit-scrollbar-thumb {
+  background: transparent; /* Прозрачный ползунок */
+}

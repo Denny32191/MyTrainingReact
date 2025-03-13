@@ -1,0 +1,22 @@
+.container {
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+&.error {
+    background-color: #F44336; 
+    color: white; 
+  }
+
+  &.loading {
+    background-color: #6534FF; 
+    color: white; 
+  }
+}
+.error__text {
+    font-family: Inter;
+font-weight: 500;
+font-size: 13px;
+line-height: 16px;
+letter-spacing: 0%;
+
+}

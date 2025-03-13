@@ -1,0 +1,49 @@
+.container {
+    height: 400px;
+    display: flex;
+    flex-direction: column; // Элементы будут друг под другом
+    align-items: center; // Центрируем по горизонтали
+    justify-content: center; // Центрируем по вертикали
+    text-align: center; // Текст по центру
+  }
+  
+  .image {
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
+  }
+  
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .description {
+    color: #666;
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+  }
+  
+  .button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #6534ff;
+    background: none;
+    border: none; // Убираем бордер
+    outline: none; // Убираем обводку при фокусе
+    border-radius: 5px;
+    cursor: pointer;
+    transition: color 0.3s;
+  
+    &:hover {
+      color: #3f1faa;
+    }
+  
+    &:focus {
+      box-shadow: none; // Убираем тень при фокусе
+    }
+  }
