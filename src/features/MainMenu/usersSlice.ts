@@ -14,7 +14,7 @@ export const fetchUsers = createAsyncThunk(
             );
             return response.data;
         } catch (error) {
-            return rejectWithValue(error.message);
+            return rejectWithValue((error as Error).message); // Приводим error к типу Error
         }
     }
 );
