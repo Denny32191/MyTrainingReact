@@ -1,13 +1,12 @@
-@import './style/variables.scss';
+@use './style/variables.scss' as vars; // Импортируем переменные
 
 body {
   margin: 0;
   padding: 0;
 }
 .container {
-  max-width: $max-width;
-  max-height: $max-height;
+  max-width: vars.$max-width; // Используем переменные через неймспейс
+  max-height: vars.$max-height;
   margin: 0 auto;
-
   align-items: center;
 }
