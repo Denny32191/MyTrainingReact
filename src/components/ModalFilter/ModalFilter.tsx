@@ -7,7 +7,7 @@ import { RootState } from "../../app/store";
 
 interface ModalFilterProps {
   isOpen?: boolean;
-  onClick?: (e: React.MouseEvent) => void; // Функция закрытия модального окна
+  onClick?: (e: React.MouseEvent) => void;
 }
 
 export const ModalFilter: React.FC<ModalFilterProps> = ({
@@ -16,28 +16,28 @@ export const ModalFilter: React.FC<ModalFilterProps> = ({
 }) => {
   const dispatch = useDispatch();
   const filterUser = useSelector((state: RootState) => state.users.filter);
+  
 
-  // Сброс фильтра при открытии модального окна
+ 
   useEffect(() => {
     if (isOpen) {
-      dispatch(setFilter(null)); // Сбрасываем фильтр при открытии
+      dispatch(setFilter(null)); 
     }
   }, [isOpen, dispatch]);
 
   const handleFilterChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value as "alphabet" | "birthday" | null;
-    dispatch(setFilter(value)); // Обновляем фильтр
+    dispatch(setFilter(value)); 
 
-    // Закрываем модальное окно после выбора
     if (onClick) {
-      // Создаем искусственное событие MouseEvent
+ 
       const mouseEvent = new MouseEvent("click", {
         bubbles: true,
         cancelable: true,
         view: window,
       }) as unknown as React.MouseEvent;
 
-      onClick(mouseEvent); // Вызываем функцию закрытия
+      onClick(mouseEvent); 
     }
   };
 
@@ -52,7 +52,7 @@ export const ModalFilter: React.FC<ModalFilterProps> = ({
           <div className={styles.modal__title}>
             <h2 className={styles.modal__text}>Сортировка</h2>
             <div className={styles.button_modal}>
-              <button className={styles.button_close} onClick={onClick}>
+              <button className={styles.button_close} onClick={onClick}> 
                 <img src={close} alt="" />
               </button>
             </div>

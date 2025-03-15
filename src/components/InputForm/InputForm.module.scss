@@ -5,6 +5,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  
 }
 
 .text {
@@ -17,30 +18,31 @@
   width: 100%; 
 }
 
-  .inputs{
-      width: 1248px;
-      height: 40px;
-      border: 1px;
-      outline: none;
-      list-style-type:none;
-       background-color:whitesmoke;
-      margin-bottom: 20px;
-      border-radius: 10px;
-      padding-left: 40px;
-  }
+
+.inputs{
+  width: 1248px;
+  height: 40px;
+  border: 1px;
+  outline: none;
+  list-style-type:none;
+   background-color:whitesmoke;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  padding-left: 40px;
+}
 
 .buttonStart {
   position: absolute;
-  top: 34%;
-  left: 10px;
+  bottom: 30%;
+left: 1%;
   transform: translateY(-50%);
   background: none;
   border: none;
   cursor: pointer;
   padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
+
+
 
   img {
     width: 20px; // Размер иконки
@@ -49,8 +51,8 @@
 }
 .buttonEnd {
   position: absolute;
-  left: 97%;
-  top: 34%; 
+  right: 2%;
+  top: 30%; 
   transform: translateY(-50%); 
   background: none;
   border: none;
@@ -65,5 +67,69 @@
     height: 20px;
   }
 }
+@media (max-width: 375px) {
+  .container {
+    max-width: 375px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+.inputContainer {
+  position: relative; 
+  width: 370px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} 
+  .inputs{
 
+    width: 343px;
+    height: 40px;
+    border: 1px;
+    outline: none;
+    list-style-type:none;
+     background-color:whitesmoke;
+    border-radius: 10px;
+
+}
+
+  .buttonStart {
+    position: absolute;
+    top: 34%;
+    left: 10px;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  .buttonEnd {
+    position: absolute;
+    left: 80%;
+  top: 34%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
 

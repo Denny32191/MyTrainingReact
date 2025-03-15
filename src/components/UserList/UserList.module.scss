@@ -1,17 +1,36 @@
 .userList {
   width: 100%;
-  max-height: 720px; 
+  max-height: 720px;
   overflow-y: auto;
-
 }
 
-/* Скрываем скроллбар в WebKit-браузерах */
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 10px 0;
+  color: #666; 
+  font-size: 14px; 
+  position: relative;
+
+  &::before,
+  &::after {
+    content: '';
+    flex: 1;
+    height: 1px; 
+    background-color: #ccc;
+    margin: 0 60px; 
+  }
+}
+
+
 .userList::-webkit-scrollbar {
-  width: 0; /* Ширина скроллбара */
-  background: transparent; /* Прозрачный фон */
+  width: 0; 
+  background: transparent; 
 }
 
-/* Скрываем ползунок скроллбара */
+
 .userList::-webkit-scrollbar-thumb {
-  background: transparent; /* Прозрачный ползунок */
+  background: transparent; 
 }

@@ -16,7 +16,7 @@ export const MainMenu = () => {
   }, [dispatch]);
 
   return (
-    <div>
+    <div >
       {/* Условный рендеринг: если есть ошибка или идет загрузка, показываем StatusMessage */}
       {error || loading ? (
         <StatusMessage isLoading={loading} error={error} />

@@ -68,3 +68,47 @@
     }
   }
 }
+@media (max-width: 375px) {
+  .buttonContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .button {
+
+
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+    background: none;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: 0%;
+    text-align: center;
+    color: #97979b;
+    position: relative; 
+    display: inline-block; 
+  
+    &:hover {
+      color: black;
+    }
+  
+    &.active {
+      color: black;
+  
+      // Подчеркивание для активной кнопки
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -11px; // Отступ от текста кнопки
+        width: 100%; // Ширина подчеркивания равна ширине текста
+        height: 4px; // Толщина подчеркивания
+        background-color: #6534FF; // Цвет подчеркивания
+        z-index: 1;
+      }
+    }
+  }
+}

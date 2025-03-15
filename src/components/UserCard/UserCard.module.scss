@@ -43,7 +43,13 @@ vertical-align: middle;
 
 
 }
-
+.userBirthday {
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 15px;
+    color: #55555C;
+    margin-left: auto; // Перемещает элемент вправо
+  }
 .userTag {
     font-size: 14px;
     color: #666;
@@ -59,4 +65,76 @@ line-height: 16px;
 letter-spacing: 0%;
 margin: 0;
 
+}
+@media (max-width: 375px) {
+    .userCard {
+        padding: 10px;
+        margin: 8px;
+        display: flex;
+        align-items: center;
+    }
+    .avatarUrl {
+        width: 72px;
+        height: 72px;
+    }
+    .avatarContainer {
+        display: flex;
+        width: 267px;
+        height: 84px;
+        align-items: center;
+        gap: 10px; // Отступ между аватаром и информацией
+    }
+    
+    .avatar {
+        width: 72px;
+        height: 72px;
+        border-radius: 50%;
+    }
+    
+    .userInfo {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .nameContainer {
+        display: flex;
+    
+    }
+    
+    .firstName {
+        font-family: Inter;
+        margin: 0;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    
+    
+    }
+    .userBirthday {
+        width: 94px;
+        height: 20px;
+        font-family: Inter;
+        font-weight: 400;
+        font-size: 15px;
+        color: #55555C;
+        margin-left: auto; // Перемещает элемент вправо
+      }
+    .userTag {
+        font-size: 14px;
+        color: #666;
+        margin-left: 4px; // Отступ между фамилией и тегом
+    }
+    
+    .userRole {
+        min-width: 46px;
+        font-family: Inter;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    letter-spacing: 0%;
+    margin: 0;
+    
+    }
 }

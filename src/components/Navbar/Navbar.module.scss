@@ -15,8 +15,27 @@
   
   .underlineContainer {
     height: 2px;
-    background-color: #e0e0e0; // Цвет полоски
+    background-color: #e0e0e0; 
     position: relative;
     margin-top: 4px;
   }
+  @media (max-width: 375px) {
+    .buttonsWrapper {
+      overflow-x: auto;
+      padding-bottom: 8px;
   
+
+      &::-webkit-scrollbar {
+        height: 4px; 
+      }
+  
+
+    }
+    .underlineContainer {
+      height: 2px;
+      background-color: #e0e0e0; 
+      position: relative;
+      margin-top: -4px;
+    }
+
+  }

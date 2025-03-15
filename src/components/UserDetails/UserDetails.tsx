@@ -4,6 +4,8 @@ import styles from "./UserDetails.module.scss";
 import arrow from './../../assets/arrow.svg'
 import star from "./../../assets/star.svg"
 import phone from "./../../assets/phone.svg"
+import {formatDate ,formatPhoneNumber } from "../../utils/utils"
+
 
 interface User {
   id: string;
@@ -21,32 +23,6 @@ interface UserDetailsProps {
   users: User[]; // Список пользователей из Redux
 }
 
-const formatDate = (dateString: string): string => {
-  const date = new Date(dateString);
-  const day = date.getDate();
-  const month = date.toLocaleString('ru-RU', { month: 'long' }); // Месяц на русском
-  const year = date.getFullYear();
-
-  return `${day} ${month} ${year}`;
-};
-
-
-
-
-// Функция для форматирования номера телефона
-const formatPhoneNumber = (phone: string): string => {
-  // Убираем все нечисловые символы
-  const cleaned = phone.replace(/\D/g, '');
-
-  // Проверяем, что номер начинается с 7 или 8
-  if (cleaned.length === 11 && (cleaned.startsWith('7') || cleaned.startsWith('8'))) {
-    return `+7 (${cleaned.slice(1, 4)}) ${cleaned.slice(4, 7)} ${cleaned.slice(7, 9)} ${cleaned.slice(9)}`;
-  }
-
-  // Если номер не соответствует ожидаемому формату, возвращаем его без изменений
-  return phone;
-};
-
 
 export const UserDetails: React.FC<UserDetailsProps> = ({ users }) => {
   const navigate = useNavigate();
@@ -59,7 +35,7 @@ export const UserDetails: React.FC<UserDetailsProps> = ({ users }) => {
   const user = users.find((u) => u.id === userId);
 
   if (!user) {
-    return <div>Пользователь не найден</div>;
+    return <div>AAAA</div>;
   }
 
   // Обработчик для звонка
@@ -84,6 +60,7 @@ export const UserDetails: React.FC<UserDetailsProps> = ({ users }) => {
           >{`${user.firstName} ${user.lastName}`}</h2>
           <p className={styles.userTag}>{user.userTag}</p>
         </div>
+        
         <p className={styles.department}>{user.department}</p>
       </div>
 

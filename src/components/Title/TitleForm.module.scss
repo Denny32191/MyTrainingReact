@@ -15,3 +15,11 @@ line-height: 28px;
 letter-spacing: 0%;
 }
 }
+@media (max-width: 375px) {
+    .text {
+        display: none;
+    }
+    .name {
+        display: none;
+    }
+}

@@ -1,0 +1,97 @@
+.userCard {
+    padding: 10px;
+    margin: 8px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .avatarContainer {
+    display: flex;
+    min-width: 179px;
+    height: 60px;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  
+  .userInfo {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .nameContainer {
+    display: flex;
+  }
+  
+  .firstName {
+    font-family: Inter;
+    margin: 0;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    margin-bottom: 10px;
+  }
+  
+  .userTag {
+    font-size: 14px;
+    color: #666;
+    margin-left: 4px;
+  }
+  
+  .userRole {
+    min-width: 46px;
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    letter-spacing: 0%;
+    margin: 0;
+  }
+  
+  /* Стили для скелетона */
+  .skeleton {
+    background-color: #e0e0e0; /* Цвет фона плейсхолдера */
+    border-radius: 4px; /* Скругление углов */
+    animation: shimmer 1.5s infinite; /* Анимация мерцания */
+  }
+  
+  @keyframes shimmer {
+    0% {
+      opacity: 0.5;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.5;
+    }
+  }
+  
+  /* Размеры плейсхолдеров */
+  .avatar.skeleton {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  
+  .firstName.skeleton {
+    width: 100px;
+    height: 16px;
+  }
+  
+  .userTag.skeleton {
+    width: 40px;
+    height: 14px;
+  }
+  
+  .userRole.skeleton {
+    width: 80px;
+    height: 13px;
+  }
