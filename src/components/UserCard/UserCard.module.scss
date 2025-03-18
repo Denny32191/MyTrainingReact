@@ -75,10 +75,11 @@
     }
   
     .avatar {
+      width: 72px;
       height: 72px;
     }
     .userCard {
-      max-width: 100%; // Карточки занимают всю ширину на мобильных устройствах
+      max-width: 100%; 
     }
     .userBirthday {
       display: flex;
@@ -89,13 +90,9 @@
   }
   
   @media (min-width: 768px) and (max-width: 1023px) {
-    .userCard {
-      max-width: 400px; // Фиксированная ширина на планшетах
-    }
+
   }
   
   @media (min-width: 1024px) {
-    .userCard {
-      max-width: 400px; // Фиксированная ширина на десктопах
-    }
+
   }
