@@ -1,32 +1,4 @@
-// .button {
-//   border: none;
-//   cursor: pointer;
-//   margin-left: 10px;
-//   background: none;
-//   font-family: "Inter", sans-serif;
-//   font-weight: 600;
-//   font-size: 15px;
-//   line-height: 20px;
-//   letter-spacing: 0%;
-//   text-align: center;
-//   color: #97979b;
 
-//   transition: color 0.3s ease;
-//   &:hover {
-//     color: #000;
-//   }
-
-//   &:active,
-//   &:focus {
-//     background: none;
-//     outline: none;
-//     border: none;
-//   }
-// }
-// .button_active {
-// width: 10px;
-// height: 10px;
-// }
 .buttonContainer {
   display: flex;
   flex-direction: column;
@@ -55,20 +27,65 @@
   &.active {
     color: black;
 
-    // Подчеркивание для активной кнопки
+  
     &::after {
       content: '';
       position: absolute;
       left: 0;
-      bottom: -6px; // Отступ от текста кнопки
-      width: 100%; // Ширина подчеркивания равна ширине текста
-      height: 2px; // Толщина подчеркивания
-      background-color: #6534FF; // Цвет подчеркивания
+      bottom: -6px; 
+      width: 100%; 
+      height: 2px; 
+      background-color: #6534FF; 
       z-index: 1;
     }
   }
 }
-@media (max-width: 375px) {
+
+@media (min-width: 376px) and (max-width: 767px) {
+  .buttonContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .button {
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+    background: none;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: 0%;
+    text-align: center;
+    color: #97979b;
+    position: relative; 
+    display: inline-block; 
+  
+    &:hover {
+      color: black;
+    }
+  
+    &.active {
+      color: black;
+  
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -6px; 
+        width: 100%; 
+        height: 2px; 
+        background-color: #6534FF; 
+        z-index: 1;
+      }
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 375px) {
   .buttonContainer {
     display: flex;
     flex-direction: column;
@@ -98,15 +115,14 @@
     &.active {
       color: black;
   
-      // Подчеркивание для активной кнопки
       &::after {
         content: '';
         position: absolute;
         left: 0;
-        bottom: -11px; // Отступ от текста кнопки
-        width: 100%; // Ширина подчеркивания равна ширине текста
-        height: 4px; // Толщина подчеркивания
-        background-color: #6534FF; // Цвет подчеркивания
+        bottom: -11px; 
+        width: 100%; 
+        height: 4px; 
+        background-color: #6534FF; 
         z-index: 1;
       }
     }

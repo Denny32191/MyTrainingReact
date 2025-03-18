@@ -1,41 +1,58 @@
-// .container {
-//     display: flex;
-//     width: 1280px;
+.buttonsWrapper {
+  display: flex;
+  width: 100%;
 
-// }
+}
 
-.container {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .buttonsWrapper {
-    display: flex;
-  }
-  
+.underlineContainer {
+  width: 96%;
+  height: 2px;
+  background-color: #e0e0e0;
+  margin-top: 4px;
+}
+
+// Медиа-запросы
+@media (min-width: 1024px) and (max-width: 1439px) {
   .underlineContainer {
-    height: 2px;
-    background-color: #e0e0e0; 
-    position: relative;
-    margin-top: 4px;
+    width: 98%;
   }
-  @media (max-width: 375px) {
-    .buttonsWrapper {
-      overflow-x: auto;
-      padding-bottom: 8px;
-  
+}
 
-      &::-webkit-scrollbar {
-        height: 4px; 
-      }
-  
-
-    }
-    .underlineContainer {
-      height: 2px;
-      background-color: #e0e0e0; 
-      position: relative;
-      margin-top: -4px;
-    }
-
+@media (min-width: 768px) and (max-width: 1023px) {
+  .underlineContainer {
+    width: 98%;
   }
+}
+
+@media (min-width: 376px) and (max-width: 767px) {
+  .buttonsWrapper {
+    overflow-x: auto;
+    padding-bottom: 8px;
+
+    &::-webkit-scrollbar {
+      height: 4px;
+    }
+  }
+
+  .underlineContainer {
+    width: 98%;
+ 
+    margin-top: -5px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 375px) {
+  .buttonsWrapper {
+    overflow-x: auto;
+    padding-bottom: 8px;
+
+    &::-webkit-scrollbar {
+      height: 4px;
+    }
+  }
+
+  .underlineContainer {
+    width: 100%;
+    margin-top: -4px;
+  }
+}

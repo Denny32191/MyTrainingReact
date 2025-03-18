@@ -96,9 +96,9 @@
         vertical-align: bottom;
         
     }
-    @media (max-width: 375px) {
+    @media (min-width: 320px) and (max-width: 375px) {
       .modal {
-        align-items: flex-end; /* Изменено: выравнивание по нижнему краю */
+        align-items: flex-end; 
        
       }
       
@@ -108,7 +108,7 @@
         height: 700px; 
         border-radius: 20px 20px 0 0; 
         display: flex;
-        box-sizing: border-box; /* Учитываем padding в ширине */
+        box-sizing: border-box; 
       }
       
       .modal__title {
@@ -125,7 +125,7 @@
         display: flex;
         position: relative;
         width: 100%;
-        height: auto; /* Изменено: высота автоматическая */
+        height: auto; 
       }
       
       .button_close {
@@ -141,11 +141,11 @@
       
       .modal__checkbox {
         width: 372px;
-        height: auto; /* Изменено: высота автоматическая */
+        height: auto; 
         display: flex;
         align-items: center;
-        margin-left: 0; /* Изменено: убрано смещение */
-        padding: 8px 16px; /* Изменено: добавлен padding */
+        margin-left: 0; 
+        padding: 8px 16px; 
         box-sizing: border-box;
         position: relative;
         bottom: 28%;
@@ -159,7 +159,7 @@
           border-radius: 50%;
           cursor: pointer;
           position: relative;
-          margin-right: 12px; /* Изменено: уменьшен отступ */
+          margin-right: 12px; 
           transition: background-color 0.3s, border-color 0.3s;
       
           &:checked {

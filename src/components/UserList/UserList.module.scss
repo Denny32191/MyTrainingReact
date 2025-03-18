@@ -1,9 +1,11 @@
 .userList {
   width: 100%;
+  max-width: 1200px; // Ограничиваем максимальную ширину
+  margin: 0 auto; // Центрируем контейнер
   max-height: 720px;
-  overflow-y: auto;
-}
 
+
+}
 .divider {
   display: flex;
   align-items: center;

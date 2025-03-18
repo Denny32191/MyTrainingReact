@@ -11,17 +11,17 @@ import { UserCardSkeleton } from "../UserCardSkeleton/UserCardSkeleton";
 
 export const UserList: React.FC = () => {
   const dispatch = useAppDispatch();
-  const filteredUsers = useAppSelector(selectFilteredUsers); // Используем отфильтрованных пользователей
+  const filteredUsers = useAppSelector(selectFilteredUsers); 
   const loading = useAppSelector((state) => state.users.loading);
   const error = useAppSelector((state) => state.users.error);
-  const filter = useAppSelector((state) => state.users.filter); // Получаем текущий фильтр
+  const filter = useAppSelector((state) => state.users.filter);
 
-  // Загружаем пользователей при монтировании
+
   useEffect(() => {
     dispatch(fetchUsers());
   }, [dispatch]);
 
-  // Состояние загрузки
+
   if (loading) {
     return (
       <div className={styles.userList}>
@@ -32,12 +32,10 @@ export const UserList: React.FC = () => {
     );
   }
 
-  // Ошибка
   if (error) {
     return <CriticalError />;
   }
 
-  // Если пользователи не найдены
   if (filteredUsers.length === 0) {
     return <SearchError />;
   }
@@ -48,13 +46,12 @@ export const UserList: React.FC = () => {
     const day = date.getDate();
     const month = date.toLocaleString("ru", { month: "long" });
 
-    // Добавляем окончание "я" для месяцев
   const monthWithSuffix = month.endsWith("ь") ? month.slice(0, -1) + "я" : month + "а";
 
   return `${day} ${monthWithSuffix}`;
 };
 
-  // Группировка пользователей по текущему и следующему году (только при фильтре "birthday")
+
   const today = new Date();
   const currentYear = today.getFullYear();
 
@@ -68,7 +65,6 @@ export const UserList: React.FC = () => {
       const birthdayDate = new Date(user.birthday);
       birthdayDate.setFullYear(currentYear);
 
-      // Если день рождения уже прошел в этом году, переносим на следующий год
       if (birthdayDate < today) {
         birthdayDate.setFullYear(currentYear + 1);
       }
@@ -80,7 +76,7 @@ export const UserList: React.FC = () => {
           key={user.id}
           user={{
             ...user,
-            birthday: formatBirthday(user.birthday), // Форматируем дату рождения
+            birthday: formatBirthday(user.birthday), 
           }}
         />
       );

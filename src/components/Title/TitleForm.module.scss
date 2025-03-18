@@ -15,7 +15,7 @@ line-height: 28px;
 letter-spacing: 0%;
 }
 }
-@media (max-width: 375px) {
+@media (min-width: 320px) and (max-width: 375px) {
     .text {
         display: none;
     }

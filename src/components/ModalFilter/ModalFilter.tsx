@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"; // Добавляем useEffect
+import React, { useEffect } from "react";
 import styles from "./ModalFilter.module.scss";
 import close from "./../../assets/close.svg";
 import { useDispatch, useSelector } from "react-redux";
@@ -16,29 +16,26 @@ export const ModalFilter: React.FC<ModalFilterProps> = ({
 }) => {
   const dispatch = useDispatch();
   const filterUser = useSelector((state: RootState) => state.users.filter);
-  
 
- 
   useEffect(() => {
     if (isOpen) {
-      dispatch(setFilter(null)); 
+      dispatch(setFilter(null));
     }
   }, [isOpen, dispatch]);
 
   const handleFilterChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value as "alphabet" | "birthday" | null;
-    dispatch(setFilter(value)); 
+    dispatch(setFilter(value));
 
-    if (onClick) {
- 
-      const mouseEvent = new MouseEvent("click", {
-        bubbles: true,
-        cancelable: true,
-        view: window,
-      }) as unknown as React.MouseEvent;
-
-      onClick(mouseEvent); 
-    }
+    setTimeout(() => {
+      if (onClick) {
+        const fakeMouseEvent = {
+          preventDefault: () => {},
+          stopPropagation: () => {},
+        } as React.MouseEvent;
+        onClick(fakeMouseEvent);
+      }
+    }, 500);
   };
 
   if (!isOpen) {
@@ -52,7 +49,7 @@ export const ModalFilter: React.FC<ModalFilterProps> = ({
           <div className={styles.modal__title}>
             <h2 className={styles.modal__text}>Сортировка</h2>
             <div className={styles.button_modal}>
-              <button className={styles.button_close} onClick={onClick}> 
+              <button className={styles.button_close} onClick={onClick}>
                 <img src={close} alt="" />
               </button>
             </div>

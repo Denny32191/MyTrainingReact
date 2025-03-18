@@ -1,24 +1,21 @@
-@use './style/variables.scss' as vars; // Импортируем переменные
+@use './style/variables.scss' as vars;
 
 body {
   margin: 0;
   padding: 0;
 }
+
 .container {
-  max-width: vars.$max-width; // Используем переменные через неймспейс
-  max-height: vars.$max-height;
+  width: vars.$max-width;
+  height: vars.$max-height;
   margin: 0 auto;
   align-items: center;
 }
-@media (max-width: 375px) {
-  body {
-    margin: 0;
-    padding: 0;
-  }
+
+
+@media (min-width: 320px) and (max-width: 1439px) {
   .container {
-    width: 375px;
-    margin: 0 auto;
-    align-items: center;
+    width: 100%; 
   }
-  
 }
+

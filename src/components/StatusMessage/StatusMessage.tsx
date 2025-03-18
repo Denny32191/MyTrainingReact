@@ -10,7 +10,6 @@ interface StatusMessageProps {
   }
   
   export const StatusMessage: React.FC<StatusMessageProps> = ({ isLoading, error }) => {
-    // Определяем классы в зависимости от состояния
     const containerClass = `${style.container} ${
       error ? style.error : isLoading ? style.loading : ""
     }`;

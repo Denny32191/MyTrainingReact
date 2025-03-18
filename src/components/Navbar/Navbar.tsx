@@ -1,7 +1,7 @@
 import React from 'react';
 import { ButtonForm } from '../ButtonForm/ButtonForm';
 import { setActiveButton } from './navbarSlice';
-import { useAppDispatch, useAppSelector } from '../../app/hooks'; // Добавьте импорт
+import { useAppDispatch, useAppSelector } from '../../app/hooks'; 
 import styles from './Navbar.module.scss';
 
 export const Navbar: React.FC = () => {
@@ -48,7 +48,7 @@ export const Navbar: React.FC = () => {
           Android
         </ButtonForm>
       </div>
-      {/* Полоска для подчеркивания */}
+
       <div className={styles.underlineContainer}>
         <div
           className={styles.underline}

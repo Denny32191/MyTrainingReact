@@ -17,7 +17,7 @@ export const MainMenu = () => {
 
   return (
     <div >
-      {/* Условный рендеринг: если есть ошибка или идет загрузка, показываем StatusMessage */}
+
       {error || loading ? (
         <StatusMessage isLoading={loading} error={error} />
       ) : (
@@ -26,8 +26,6 @@ export const MainMenu = () => {
           <InputForm placeholder="Введите имя,тег,почту..." type="text"/>
         </>
       )}
-
-      {/* Остальные компоненты отображаются всегда */}
       <Navbar />
       <div>
         <UserList  />

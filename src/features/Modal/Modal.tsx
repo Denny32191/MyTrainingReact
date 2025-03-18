@@ -3,8 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import styles from "./ModaFilterl.module.scss";
 import { setIsOpen } from "./modalSlice";
 import { RootState } from "../../app/store";
-import { ModalFilter } from "./../../components/ModalFilter/ModalFilter"; // Импортируем ModalFilter
-
+import { ModalFilter } from "./../../components/ModalFilter/ModalFilter"; 
 export const Modal = () => {
   const dispatch = useDispatch();
   const isOpen = useSelector((state: RootState) => state.modal.isOpen);

@@ -21,7 +21,7 @@ interface UserCardProps {
 
 export const UserCard: React.FC<UserCardProps> = ({ user }) => {
     const navigate = useNavigate();
-    const filter = useSelector((state: RootState) => state.users.filter); // Получаем текущий фильтр
+    const filter = useSelector((state: RootState) => state.users.filter); 
   
     const handleClick = () => {
       navigate(`/user/${user.id}`);
@@ -43,7 +43,6 @@ export const UserCard: React.FC<UserCardProps> = ({ user }) => {
             <span className={styles.userRole}>{user.position}</span>
           </div>
         </div>
-        {/* Выносим дату рождения на уровень с avatarContainer */}
         {filter === "birthday" && user.birthday && (
           <div className={styles.userBirthday}>{user.birthday}</div>
         )}

@@ -7,7 +7,7 @@ export const selectFilteredUsers = (state: RootState) => {
   const { users, filter, searchQuery } = state.users;
   const { activeButton } = state.navbar;
 
-  // Фильтрация по роли (activeButton)
+  // Фильтрация по роли 
   let filteredUsers = users;
   if (activeButton !== "Все") {
     filteredUsers = users.filter((user) => {
@@ -28,7 +28,7 @@ export const selectFilteredUsers = (state: RootState) => {
     });
   }
 
-  // Фильтрация по поисковому запросу
+  // Фильтрация
   if (searchQuery) {
     filteredUsers = filteredUsers.filter((user) => {
       const fullName = `${user.firstName} ${user.lastName}`.toLowerCase();
@@ -49,11 +49,10 @@ export const selectFilteredUsers = (state: RootState) => {
       const dateA = new Date(a.birthday);
       const dateB = new Date(b.birthday);
 
-      // Устанавливаем год на текущий для сравнения
       dateA.setFullYear(currentYear);
       dateB.setFullYear(currentYear);
 
-      // Если день рождения уже прошел в этом году, переносим на следующий год
+
       if (dateA < today) dateA.setFullYear(currentYear + 1);
       if (dateB < today) dateB.setFullYear(currentYear + 1);
 
@@ -61,7 +60,6 @@ export const selectFilteredUsers = (state: RootState) => {
     });
   }
 
-  // Если фильтр не выбран, возвращаем отфильтрованных по роли пользователей
   return filteredUsers;
 };
 

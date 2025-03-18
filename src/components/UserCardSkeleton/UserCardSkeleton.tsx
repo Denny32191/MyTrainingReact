@@ -1,7 +1,6 @@
 import styles from "./UserCardSkeleton.module.scss";
 
 export const UserCardSkeleton = () => {
-  // Создаем массив из 3 элементов для отображения 3 скелетонов
   const skeletonCount = 6;
 
   return (

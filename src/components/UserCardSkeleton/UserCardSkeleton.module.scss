@@ -55,11 +55,11 @@
     margin: 0;
   }
   
-  /* Стили для скелетона */
+
   .skeleton {
-    background-color: #e0e0e0; /* Цвет фона плейсхолдера */
-    border-radius: 4px; /* Скругление углов */
-    animation: shimmer 1.5s infinite; /* Анимация мерцания */
+    background-color: #e0e0e0; 
+    border-radius: 4px; 
+    animation: shimmer 1.5s infinite; 
   }
   
   @keyframes shimmer {
@@ -74,8 +74,7 @@
     }
   }
   
-  /* Размеры плейсхолдеров */
-  .avatar.skeleton {
+    .avatar.skeleton {
     width: 50px;
     height: 50px;
     border-radius: 50%;

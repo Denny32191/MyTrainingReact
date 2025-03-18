@@ -26,7 +26,7 @@ export const ButtonForm: React.FC<ButtonProps> = ({
       >
         {children}
       </button>
-      {isActive && <div className={styles.buttonUnderline} />} {/* Подчеркивание */}
+      {isActive && <div className={styles.buttonUnderline} />} 
     </div>
   );
 };
