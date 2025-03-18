@@ -9,7 +9,7 @@ import { useSelector } from "react-redux";
 function App() {
   const users = useSelector((state: RootState) => state.users.users);
   return (
-    <BrowserRouter basename="/MyTrainReact">
+    <BrowserRouter basename="/MyTrainingReact">
       <div className={styles.container}>
         <Routes>
           <Route path="/" element={<MainMenu />} />
